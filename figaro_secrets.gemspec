@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.version = FigaroSecrets::VERSION
 
   spec.metadata["allowed_push_host"] = "http://mygemserver.com"
-  spec.files = `git ls-files`.split("\x0")
+  spec.files = `git ls-files -z`.split("\x0")
   spec.require_paths = ["lib"]
 
   spec.add_dependency "figaro"
