@@ -5,6 +5,8 @@ module FigaroSecrets
     SECRET_REGEX = /^secretsmanager:(?<secret>.*)/
 
     def parse_secrets(configuration)
+      return configuration unless FigaroSecrets.enabled?
+
       configuration.inject({}) do |memo, (key, value)|
         memo.merge(key => parse_secret(key, value))
       end
