@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Secrets for Figaro"
   spec.version = FigaroSecrets::VERSION
 
-  spec.metadata["allowed_push_host"] = "http://mygemserver.com"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
   spec.files = `git ls-files -z`.split("\x0")
   spec.require_paths = ["lib"]
 
