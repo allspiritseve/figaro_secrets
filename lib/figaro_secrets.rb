@@ -9,7 +9,7 @@ module FigaroSecrets
   end
 
   def self.log_error(message)
-    Rails.logger.error(message) || $stderr.puts(message)
+    Rails.logger&.error(message) || $stderr.puts(message)
   end
 end
 

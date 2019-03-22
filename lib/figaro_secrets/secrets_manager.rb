@@ -15,7 +15,7 @@ module FigaroSecrets
     rescue JSON::ParserError => e
       FigaroSecrets.log_error("Could not parse secret: #{e}")
     rescue Aws::Errors::ServiceError => e
-      FigaroSecrets.log_error("Could not retrieve secret #{secret.inspect}: #{e}"
+      FigaroSecrets.log_error("Could not retrieve secret #{secret.inspect}: #{e}")
     end
 
     def client

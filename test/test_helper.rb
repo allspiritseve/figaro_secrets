@@ -1,4 +1,10 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+require "minitest/autorun"
+
+require "figaro"
 require "figaro_secrets"
 
-require "minitest/autorun"
+class Rails
+  def self.logger
+  end
+end

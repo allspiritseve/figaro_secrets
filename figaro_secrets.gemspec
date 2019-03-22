@@ -16,6 +16,7 @@ Gem::Specification.new do |spec|
   spec.files = `git ls-files`.split("\x0")
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "figaro"
   spec.add_dependency "aws-sdk-secretsmanager"
 
   spec.add_development_dependency "bundler"
