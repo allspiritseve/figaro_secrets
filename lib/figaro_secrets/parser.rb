@@ -1,5 +1,3 @@
-require "figaro_secrets/secrets_manager"
-
 module FigaroSecrets
   class Parser
     SECRET_REGEX = /^secretsmanager:(?<secret>.*)/
@@ -21,7 +19,10 @@ module FigaroSecrets
     end
 
     def secrets_manager
-      @secrets_manager ||= SecretsManager.new
+      @secrets_manager ||= begin
+        require "figaro_secrets/secrets_manager"
+        SecretsManager.new
+      end
     end
   end
 end
