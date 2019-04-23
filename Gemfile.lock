@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    figaro_secrets (0.1.3)
+    figaro_secrets (0.1.4)
       aws-sdk-secretsmanager
       figaro
 
@@ -9,8 +9,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     aws-eventstream (1.0.2)
-    aws-partitions (1.146.0)
-    aws-sdk-core (3.48.2)
+    aws-partitions (1.151.0)
+    aws-sdk-core (3.48.4)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
