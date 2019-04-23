@@ -19,3 +19,4 @@ module FigaroSecrets
 end
 
 require "figaro_secrets/hook"
+require "railtie" if defined?(Rails)

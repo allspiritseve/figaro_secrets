@@ -6,14 +6,15 @@ require "figaro_secrets/version"
 Gem::Specification.new do |spec|
   spec.authors = ["Cory Kaufman-Schofield"]
   spec.email = ["cory@corykaufman.com"]
-  spec.homepage = "https://github.com/allspiritseve/figaro_secrets"
-  spec.license = "MIT"
   spec.name = "figaro_secrets"
-  spec.summary = "Secrets for Figaro"
   spec.version = FigaroSecrets::VERSION
 
-  spec.metadata["allowed_push_host"] = "https://rubygems.org"
+  spec.homepage = "https://github.com/allspiritseve/figaro_secrets"
+  spec.license = "MIT"
+  spec.summary = "Secrets for Figaro"
+
   spec.files = `git ls-files -z`.split("\x0")
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
   spec.require_paths = ["lib"]
 
   spec.add_dependency "figaro"
