@@ -14,3 +14,5 @@ namespace :figaro_secrets do
     puts "\n"
   end
 end
+
+task figaro_secrets: "figaro_secrets:list"
