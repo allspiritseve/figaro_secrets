@@ -18,6 +18,34 @@ Or install it yourself as:
 
 ## Usage
 
+Currently, `figaro_secrets` only supports AWS Secrets Manager.
+
+### Text secret
+
+Format:
+```
+secretsmanager:{secret_name}
+```
+
+Example:
+```
+# config/application.yml
+GITHUB_API_TOKEN: "secretsmanager:github_api_token"
+```
+
+### JSON secret
+
+Format:
+```
+secretsmanager:{secret_name}:{key}
+```
+
+Example:
+```
+# config/application.yml
+GITHUB_API_TOKEN: "secretsmanager:github:api_token"
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run

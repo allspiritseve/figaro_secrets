@@ -8,6 +8,10 @@ module FigaroSecrets
     Parser.new.parse_secrets(configuration)
   end
 
+  def self.secrets(configuration)
+    @parser ||= Parser.new.secrets(configuration)
+  end
+
   def self.log_error(message)
     Rails.logger&.error(message) || $stderr.puts(message)
   end
