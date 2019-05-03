@@ -20,43 +20,45 @@ Or install it yourself as:
 
 Currently, `figaro_secrets` only supports AWS Secrets Manager.
 
-### Text secret
+### Text secrets
 
-Format:
-```
-secretsmanager:{secret_name}
-```
+Format: `secretsmanager:secret_name`
 
 Example:
-```
+```ruby
 # config/application.yml
 GITHUB_API_TOKEN: "secretsmanager:github_api_token"
 ```
 
-### JSON secret
+### JSON secrets
 
-Format:
-```
-secretsmanager:{secret_name}:{key}
-```
+Format: `secretsmanager:secret_name:key`
 
 Example:
-```
+```ruby
 # config/application.yml
 GITHUB_API_TOKEN: "secretsmanager:github:api_token"
 ```
 
-## Development
+## Debugging
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run
-`rake test` to run the tests. You can also run `bin/console` for an interactive
-prompt that will allow you to experiment.
+Several rake tasks are available to assist in debugging secrets. You can specify the environment in a few different ways:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To
-release a new version, update the version number in `version.rb`, and then run
-`bundle exec rake release`, which will create a git tag for the version, push
-git commits and tags, and push the `.gem` file to
-[rubygems.org](https://rubygems.org).
+1. `RAILS_ENV`
+2. `APP_ENV`
+3. Task argument, e.g. `rake figaro_secrets:list[production]`
+
+### List configuration
+
+```
+rake figaro_secrets:list
+```
+
+### Show secrets
+
+```
+rake figaro_secrets:secrets
+```
 
 ## Contributing
 
